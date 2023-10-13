@@ -120,7 +120,12 @@ footer {
 @media screen and (max-height:812px) {
     #question-area {
         height: 45vh;
+
     }
+        #question-area > *{
+            color: #0d1321;
+        }
+    
 }
 
 /* tablets  */

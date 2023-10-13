@@ -37,7 +37,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     border: 4px solid #0d1321;
-
+    box-sizing: fit-content;
     align-items: baseline;
     margin-top: 4rem;
 }

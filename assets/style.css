@@ -12,12 +12,13 @@ body {
     /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Tilt Neon', sans-serif;
     text-align: center;
-    color: #f0ebd8;
+
 }
 
 header {
     background-color: #0d1321;
     height: 8vh;
+    color: #f0ebd8;
 
 }
 
@@ -52,10 +53,16 @@ main {
     background-color: rgba(0, 0, 0, 0);
     border: 3px solid #0d1321;
 
+
 }
 
 .btn i {
     font-size: 2rem;
+}
+
+.btn i,
+p {
+    color: #0d1321;
 }
 
 #submit {
@@ -122,10 +129,11 @@ footer {
         height: 45vh;
 
     }
-        #question-area > *{
-            color: #0d1321;
-        }
-    
+
+    #question-area>* {
+        color: #0d1321;
+    }
+
 }
 
 /* tablets  */

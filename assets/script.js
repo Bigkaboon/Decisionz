@@ -13,15 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
 });
 
-function checkQuestionType() {
+function checkQuestionType(questionType) {
     if (questionType = "yesno") {
-        yesOrNo();
+        
     }
 }
 
+
 function generateAnswer() {
+
 
 }
 
@@ -36,14 +39,24 @@ function yesOrNo(answ1, answ2) {
         alert("No!");
     }
 }
-function shouldOrShouldNot() {
+function shouldOrShouldNot(answ1, answ2) {
+    /* answ1 = 1;
+    answ2 = 2;
+    answCheck = Math.floor(Math.random() * 2);
 
+    if (answ1 === answCheck) {
+        alert("You should!");
+    } else {
+        alert("You shouldn't");
+    } */
 }
 function alternatives() {
 
 }
 function scale() {
-
+    let scale = parseInt(promt("You chose 'Scale', what scale would you like to see  1 - ..."));
+    let ratio = Math.floor(Math.random() * scale);
+    alert("The odds for that is " + ((ratio / scale) * 100) + "%");
 }
 
 

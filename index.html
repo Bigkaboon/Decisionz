@@ -23,19 +23,19 @@
     </header>
     <main>
       <div id="question-area">
-        <button class="btn 5050">
+        <button data-type="yesno" class="btn 5050">
           <i class="fa-solid fa-dice-d20"></i>
           <p>Yes/No</p>
         </button>
-        <button class="btn 5050">
+        <button data-type="shouldshouldnt" class="btn 5050">
           <i class="fa-solid fa-dice"></i>
           <p>Should/Shouldn't</p>
         </button>
-        <button class="btn">
+        <button data-type="alternatives" class="btn">
           <i class="fa-solid fa-shuffle"></i>
           <p>Alternatives</p>
         </button>
-        <button class="btn">
+        <button data-type="scale" class="btn">
           <i class="fa-solid fa-scale-unbalanced-flip"></i>
 
           <p>Scale</p>
@@ -44,8 +44,9 @@
       <div id="input-area">
         <input type="text" name="question" id="question" />
       </div>
-      <button id="submit" type="submit"><p>Ask!</p></button>
+      <button data-type="submit" id="submit" type="submit"><p>Ask!</p></button>
     </main>
     <footer></footer>
+    <script src="assets/script.js"></script>
   </body>
 </html>

@@ -5,34 +5,47 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
-                generateAnswer();
+                alert("hello");
+
             } else {
                 let questionType = this.getAttribute("data-type");
-
+                alert(`You pressed ${questionType}`);
+                checkQuestion(questionType);
             }
         });
     }
-    checkQuestion(questionType);
+
 
 
 
 });
 
-function checkQuestion() {
-    if (document.getElementById("question").value = True) {
-        generateAnswer();
+function checkQuestion(questionType) {
+    if (questionType === "yesno") {
+        generateAnswer(questionType);
+    } else if (questionType === "shouldshouldnt") {
+        generateAnswer(questionType);
     }
+
 }
 
+function generateAnswer(questionType) {
 
-function generateAnswer() {
-    if (questionType = "yesno") {
+    if (questionType === "yesno") {
         yesOrNo();
-    } else if (questionType = "shouldshouldnt") {
+    } else if (questionType === "shouldshouldnt") {
         shouldOrShouldNot();
+    } else if (questionType === "scale") {
+        alert(`this is ${questionType}`);
+    } else if (questionType === "alternatives") {
+        alert(`this is ${questionType}`);
     }
 
+
+
+
 }
+
 
 function yesOrNo(answ1, answ2) {
     answ1 = 1;
@@ -60,9 +73,7 @@ function alternatives() {
 
 }
 function scale() {
-    let scale = parseInt(promt("You chose 'Scale', what scale would you like to see  1 - ..."));
-    let ratio = Math.floor(Math.random() * scale);
-    alert("The odds for that is " + ((ratio / scale) * 100) + "%");
+
 }
 
 

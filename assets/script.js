@@ -8,23 +8,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 generateAnswer();
             } else {
                 let questionType = this.getAttribute("data-type");
-                checkQuestionType(questionType);
+
             }
         });
     }
+    checkQuestion(questionType);
+
 
 
 });
 
-function checkQuestionType(questionType) {
-    if (questionType = "yesno") {
-        
+function checkQuestion() {
+    if (document.getElementById("question").value = True) {
+        generateAnswer();
     }
 }
 
 
 function generateAnswer() {
-
+    if (questionType = "yesno") {
+        yesOrNo();
+    } else if (questionType = "shouldshouldnt") {
+        shouldOrShouldNot();
+    }
 
 }
 
@@ -40,7 +46,7 @@ function yesOrNo(answ1, answ2) {
     }
 }
 function shouldOrShouldNot(answ1, answ2) {
-    /* answ1 = 1;
+    answ1 = 1;
     answ2 = 2;
     answCheck = Math.floor(Math.random() * 2);
 
@@ -48,7 +54,7 @@ function shouldOrShouldNot(answ1, answ2) {
         alert("You should!");
     } else {
         alert("You shouldn't");
-    } */
+    }
 }
 function alternatives() {
 

@@ -4,13 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("hello");
-
-            } else {
+            if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternative") {
                 let questionType = this.getAttribute("data-type");
                 alert(`You pressed ${questionType}`);
                 checkQuestion(questionType);
+            } else if (this.get.Attribute("data-type") === "submit") {
+                alert("hello");
             }
         });
     }

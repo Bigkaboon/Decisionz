@@ -59,6 +59,13 @@ function handleQuestion() {
 
     alert(`Your question is: ` + userQuestion);
 
+    var newQuestion = document.createElement("div");
+    newQuestion.innerHTML = "<strong>Question:<strong> " + userQuestion + " <strong>Answer:<strong> " + answer;
+
+    var displayQnA = document.getElementById("displayQnA");
+    displayQnA.appendChild(newQuestion);
+
+    document.getElementById("question").value = "";
 }
 
 function yesOrNo(answ1, answ2) {

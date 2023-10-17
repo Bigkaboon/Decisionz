@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
-
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternative") {
@@ -16,22 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("You chose a Scale question type! Follow the instructions given");
                 }
 
-
                 checkQuestion(questionType);
 
                 if (this.getAttribute("data-type") === "submit") {
                     handleQuestion();
                     alert(`The answer is ` + answer);
-
                 }
             }
         });
-
     }
-
-
-
-
 });
 
 function checkQuestion(questionType) {
@@ -48,7 +40,6 @@ function checkQuestion(questionType) {
 }
 
 function generateAnswer(questionType) {
-
     if (questionType === "yesno") {
         yesOrNo();
     } else if (questionType === "shouldshouldnt") {
@@ -58,19 +49,12 @@ function generateAnswer(questionType) {
     } else if (questionType === "alternatives") {
         alert(`this is ${questionType}`);
     }
-
-
-
-
 }
 
 function handleQuestion() {
     let userQuestion = document.getElementById("question").value;
 
     alert(`Your question is: ` + userQuestion);
-
-
-
 
     let newQuestion = document.createElement("li");
     newQuestion.innerHTML =
@@ -90,10 +74,8 @@ function yesOrNo(answ1, answ2) {
 
     if (answ1 === answCheck) {
         answer = "Yes!";
-
     } else {
         answer = "No!";
-
     }
 }
 function shouldOrShouldNot(answ1, answ2) {
@@ -103,10 +85,8 @@ function shouldOrShouldNot(answ1, answ2) {
 
     if (answ1 === answCheck) {
         answer = "You should!";
-
     } else {
         answer = "You shouldn't";
-
     }
 }
 function alternatives() {

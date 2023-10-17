@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternative") {
                 let questionType = this.getAttribute("data-type");
-                alert(`You pressed ${questionType}`);
+                alert(`You pressed THIS IS NOT SUBMIT`);
                 checkQuestion(questionType);
-            } else if (this.get.Attribute("data-type") === "submit") {
-                alert("hello");
+            } else if (this.getAttribute("data-type") === "submit") {
+                alert(answer);
             }
         });
     }
@@ -23,6 +23,10 @@ function checkQuestion(questionType) {
     if (questionType === "yesno") {
         generateAnswer(questionType);
     } else if (questionType === "shouldshouldnt") {
+        generateAnswer(questionType);
+    } else if (questionType === "scale") {
+        generateAnswer(questionType);
+    } else if (questionType === "alternatives") {
         generateAnswer(questionType);
     }
 
@@ -52,9 +56,11 @@ function yesOrNo(answ1, answ2) {
     answCheck = Math.floor(Math.random() * 2);
 
     if (answ1 === answCheck) {
-        alert("Yes!");
+        answer = "Yes!";
+        alert(answer);
     } else {
-        alert("No!");
+        answer = "No!";
+        alert(answer);
     }
 }
 function shouldOrShouldNot(answ1, answ2) {
@@ -63,9 +69,11 @@ function shouldOrShouldNot(answ1, answ2) {
     answCheck = Math.floor(Math.random() * 2);
 
     if (answ1 === answCheck) {
-        alert("You should!");
+        answer = "You should!";
+        alert(answer);
     } else {
-        alert("You shouldn't");
+        answer = "You shouldn't";
+        alert(answer);
     }
 }
 function alternatives() {

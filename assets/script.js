@@ -6,7 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternative") {
                 let questionType = this.getAttribute("data-type");
-                alert(`You pressed ${questionType}`);
+                if (questionType === "yesno") {
+                    alert("You chose a Yes/No question type! Ask your question in the field down below");
+                } else if (questionType === "shouldshouldnt") {
+                    alert("You chose a Should/Shouldn't question type! Ask your question in the field down below");
+                } else if (questionType === "alternative") {
+                    alert("You chose a Alternative question type! Follow the instructions given");
+                } else if (questionType === "scale") {
+                    alert("You chose a Scale question type! Follow the instructions given");
+                }
+
+
                 checkQuestion(questionType);
 
                 if (this.getAttribute("data-type") === "submit") {

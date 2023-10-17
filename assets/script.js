@@ -55,19 +55,23 @@ function generateAnswer(questionType) {
 }
 
 function handleQuestion() {
-    var userQuestion = document.getElementById("question").value;
+    let userQuestion = document.getElementById("question").value;
 
     alert(`Your question is: ` + userQuestion);
 
-    var newQuestion = document.createElement("ol");
-    newQuestion.innerHTML =
-        `<li>Question: ${userQuestion} <br> Answer: ${answer} </li>`;
 
-    var displayQnA = document.getElementById("QnA-list");
+
+
+    let newQuestion = document.createElement("li");
+    newQuestion.innerHTML =
+        ` Question: ${userQuestion} <br> Answer: ${answer} `;
+
+    let displayQnA = document.getElementById("QnA-list");
     displayQnA.appendChild(newQuestion);
 
     document.getElementById("question").value = "";
 }
+
 
 function yesOrNo(answ1, answ2) {
     answ1 = 1;

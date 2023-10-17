@@ -253,6 +253,11 @@ footer {
         width: 50vw;
     }
 
+    ol {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
 
     footer {
         height: 7vh;

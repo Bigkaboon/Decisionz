@@ -59,10 +59,11 @@ function handleQuestion() {
 
     alert(`Your question is: ` + userQuestion);
 
-    var newQuestion = document.createElement("div");
-    newQuestion.innerHTML = "<strong>Question:<strong> " + userQuestion + " <strong>Answer:<strong> " + answer;
+    var newQuestion = document.createElement("ol");
+    newQuestion.innerHTML =
+        `<li>Question: ${userQuestion} <br> Answer: ${answer} </li>`;
 
-    var displayQnA = document.getElementById("displayQnA");
+    var displayQnA = document.getElementById("QnA-list");
     displayQnA.appendChild(newQuestion);
 
     document.getElementById("question").value = "";

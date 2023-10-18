@@ -3,41 +3,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternative") {
+            if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternatives") {
                 let questionType = this.getAttribute("data-type");
-                if (questionType === "yesno") {
-                    alert("You chose a Yes/No question type! Ask your question in the field down below");
-                } else if (questionType === "shouldshouldnt") {
-                    alert("You chose a Should/Shouldn't question type! Ask your question in the field down below");
-                } else if (questionType === "alternative") {
-                    alert("You chose a Alternative question type! Follow the instructions given");
-                } else if (questionType === "scale") {
-                    alert("You chose a Scale question type! Follow the instructions given");
-                }
+                generateAnswer(questionType);
+                alert(questionType);
+                typeOfQuestion.push(questionType);
+                /* Trying to replace 'null' to the latest questionType 
 
-                checkQuestion(questionType);
+                if (document.getElementById("data-type") === "null") {
+                    questionType = typeOfQuestion.at(1);
 
-                if (this.getAttribute("data-type") === "submit") {
-                    handleQuestion();
-                    alert(`The answer is ` + answer);
-                }
+                } */
+
             }
         });
     }
+    let typeOfQuestion = [];
+
+
+
+    document.getElementById("input-area").addEventListener("submit", function () {
+        event.preventDefault();
+        handleQuestion();
+        alert(typeOfQuestion);
+        questionType = typeOfQuestion.length[-1];
+        if (questionType === "alternatives") {
+            alternatives();
+        }
+        
+    });
+
+
 });
 
-function checkQuestion(questionType) {
-    if (questionType === "yesno") {
-        generateAnswer(questionType);
-    } else if (questionType === "shouldshouldnt") {
-        generateAnswer(questionType);
-    } else if (questionType === "scale") {
-        generateAnswer(questionType);
-    } else if (questionType === "alternatives") {
-        generateAnswer(questionType);
-    }
 
-}
 
 function generateAnswer(questionType) {
     if (questionType === "yesno") {
@@ -45,13 +44,15 @@ function generateAnswer(questionType) {
     } else if (questionType === "shouldshouldnt") {
         shouldOrShouldNot();
     } else if (questionType === "scale") {
-        alert(`this is ${questionType}`);
+        scale();
     } else if (questionType === "alternatives") {
-        alert(`this is ${questionType}`);
+        alternatives(questionType);
     }
 }
 
-function handleQuestion() {
+function handleQuestion(typeOfQuestion) {
+
+
     let userQuestion = document.getElementById("question").value;
 
     alert(`Your question is: ` + userQuestion);
@@ -89,11 +90,16 @@ function shouldOrShouldNot(answ1, answ2) {
         answer = "You shouldn't";
     }
 }
-function alternatives() {
 
+function alternatives(questionType) {
+    /* document.getElementById("input-area").addEventListener("submit", function () {
+        let altNumber = document.getElementById("question").value;
+        console.log(altNumber);
+
+    });
+ */
 }
 function scale() {
 
 }
-
 

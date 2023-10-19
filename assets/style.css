@@ -289,6 +289,14 @@ footer {
         width: 10vw;
         height: 4vh;
     }
+
+    #sendEmail {
+        width: 40vw;
+    }
+
+    #email-result {
+        padding: 4px;
+    }
 }
 
 /* Large phone or Landscape mode */
@@ -391,6 +399,24 @@ footer {
 
     #scale-input {
         width: 30vw;
+    }
+
+    #sendEmail {
+        width: 30vw;
+    }
+
+    #email-result {
+        padding: 4px;
+    }
+
+    #sendEmail>input {
+        width: 15vw;
+        margin-top: 2rem;
+
+    }
+
+    #send {
+        padding: 4px 1rem;
     }
 
 

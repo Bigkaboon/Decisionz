@@ -147,11 +147,13 @@ document.getElementById('alternatives-size').addEventListener('change', function
     const holder = document.getElementById('alternative-inputs');
     holder.innerHTML = '';
     for (let i = 0; i < size; i++) {
+
         const text = document.createElement('div');
         text.innerHTML = "<input type='text' value='' name='items[]' class='alter' style='padding:5px;' placeholder='Enter alternative' />";
         holder.appendChild(text);
 
     }
+
 
 
 });
@@ -192,5 +194,7 @@ document.getElementById('alternative-button').addEventListener('click', function
 
     const holder = document.getElementById('alternative-inputs');
     holder.innerHTML = '';
+
+
 
 });

@@ -97,6 +97,35 @@ p {
     border: 2px solid #0d1321;
 }
 
+#scale-size {
+    justify-content: center;
+    background-color: #f0ebd8;
+    width: 32vw;
+    margin-right: auto;
+    margin-left: auto;
+    height: 5vh;
+    font-weight: 500;
+    font-family: 'Tilt Neon', sans-serif;
+    margin-top: 1rem;
+    border: 2px solid #0d1321;
+}
+
+#scale-button {
+    width: 22vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0ebd8;
+    color: #0d1321;
+    height: 5vh;
+    font-family: 'Tilt Neon', sans-serif;
+    border: 2px solid #0d1321
+}
+
+#scale-input {
+    margin-bottom: 1rem;
+    width: 80vw;
+}
+
 
 #submit {
     width: 15vw;
@@ -304,6 +333,19 @@ footer {
 
     #alternative-button {
         width: 5vw;
+    }
+
+    #scale-button {
+        width: 8vw;
+    }
+
+    #scale-size {
+        height: 5vh;
+        width: 20vw;
+    }
+
+    #scale-input {
+        width: 30vw;
     }
 
 

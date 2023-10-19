@@ -146,7 +146,7 @@ document.getElementById("scale-button").addEventListener("click", function (even
 
     let newQuestion = document.createElement("li");
     newQuestion.innerHTML =
-        ` Your alternatives: ${userQuestion} <br> Answer: ${randomScale} / ${scaleSize}`;
+        ` Your question: ${userQuestion} <br> Answer: ${randomScale} / ${scaleSize}`;
 
     let displayQnA = document.getElementById("QnA-list");
     displayQnA.appendChild(newQuestion);

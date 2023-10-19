@@ -284,6 +284,14 @@ footer {
         color: #0d1321;
     }
 
+    #sendEmail {
+        min-height: 10vh;
+    }
+
+    .set-color {
+        color: #0d1321;
+    }
+
 }
 
 /* tablets  */

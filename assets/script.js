@@ -209,7 +209,7 @@ document.getElementById('alternative-button').addEventListener('click', function
 
 });
 
-/* document.getElementById("email-result").addEventListener("click", function (event) {
+document.getElementById("email-result").addEventListener("click", function (event) {
     document.getElementById('sendEmail').classList.remove('hide');
 });
 
@@ -239,4 +239,4 @@ const contact = () => {
         <input type="submit" value="Send" />
     </form>;
 };
- */
+

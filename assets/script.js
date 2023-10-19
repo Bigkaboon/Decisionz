@@ -59,6 +59,9 @@ function yesOrNo(answ1, answ2) {
     document.getElementById('scale-button').classList.add('hide');
     document.getElementById('scale-input').classList.add('hide');
     document.getElementById('scale-input').classList.add('hide');
+    const holder = document.getElementById('alternative-inputs');
+    holder.innerHTML = '';
+
 
     answ1 = 1;
     answ2 = 2;
@@ -78,6 +81,10 @@ function shouldOrShouldNot(answ1, answ2) {
     document.getElementById('scale-button').classList.add('hide');
     document.getElementById('scale-input').classList.add('hide');
     document.getElementById('scale-size').classList.add('hide');
+
+    const holder = document.getElementById('alternative-inputs');
+    holder.innerHTML = '';
+
 
     answ1 = 1;
     answ2 = 2;
@@ -108,6 +115,10 @@ function scale() {
     document.getElementById('scale-size').classList.remove('hide');
     document.getElementById('scale-button').classList.remove('hide');
     document.getElementById('scale-input').classList.remove('hide');
+
+    const holder = document.getElementById('alternative-inputs');
+    holder.innerHTML = '';
+
 
 
 }

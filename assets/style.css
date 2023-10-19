@@ -285,10 +285,14 @@ footer {
     }
 
     #sendEmail {
-        min-height: 10vh;
+        min-height: 15vh;
     }
 
-    .set-color {
+    #send {
+        color: #0d1321;
+    }
+
+    #email-result {
         color: #0d1321;
     }
 

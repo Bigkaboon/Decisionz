@@ -221,6 +221,22 @@ footer {
         color: #0d1321;
     }
 
+    #displayQnA {
+        margin-bottom: 2rem;
+    }
+
+    header {
+        height: 16vh;
+    }
+
+    #scale-size {
+        color: #0d1321;
+    }
+
+    #alternatives-size {
+        color: #0d1321;
+    }
+
 }
 
 /* tablets  */

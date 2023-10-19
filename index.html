@@ -55,8 +55,8 @@
         <button id="alternative-button" class="hide" type="button">
           <p>Choose!</p>
         </button>
-        <select id="scale-size" class="hide">
-          <option>Select your scale</option>
+        <select id="" class="hide">
+          <option>Select youscale-sizer scale</option>
           <option value="10" id="1-10">1 - 10</option>
           <option value="100" id="1-100">1 - 100</option>
           <option value="1000" id="1-1000">1 - 1000</option>
@@ -70,11 +70,13 @@
         </button>
       </form>
       ​
-      <h3>Question's and Answer's</h3>
-      <div id="displayQnA">
-        <ol id="QnA-list"></ol>
-
-        <div id="sendEmail" class="hide">
+      
+        <h3>Question's and Answer's</h3>
+        <div id="displayQnA" name="message">
+            <ol id="QnA-list"></ol>
+        </div>
+        <!-- <form id="sendEmail" class="hide">
+            <div id="QnA-value" name="message"></div>
           <input
             type="text"
             name="user_name"
@@ -89,8 +91,8 @@
             required
           /><br />
           <button>Send</button>
-        </div>
-        <button type="button">Result on Email!</button>
+        </form>
+        <button type="button" id="email-result">Result on Email!</button> -->
       </div>
     </main>
     <footer></footer>

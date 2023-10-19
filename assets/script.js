@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+
 
 document.addEventListener("DOMContentLoaded", function () {
-    
+
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
@@ -211,13 +210,21 @@ document.getElementById('alternative-button').addEventListener('click', function
     holder.innerHTML = '';
 
 });
-const contact = contact = () => {
+
+/* document.getElementById("email-result").addEventListener("click", function (event) {
+    document.getElementById('sendEmail').classList.remove('hide');
+});
+
+const contact = () => {
+
     const form = useRef();
+    let qNaValue = document.getElementById("QnA-value");
+    qNaValue = document.getElementById("displayQnA").innerHTML;
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+        emailjs.sendForm('service_5zj8vt1', 'template_sc6pd6m', form.current, 'd8LxiloK_bJZiS78E')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -226,13 +233,12 @@ const contact = contact = () => {
     };
 
     <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
+        <div name="message" id="QnA-value"></div>
         <input type="text" name="user_name" />
-        <label>Email</label>
+
         <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
+
         <input type="submit" value="Send" />
     </form>;
 };
-
+ */

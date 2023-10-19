@@ -16,6 +16,7 @@
     ></script>
     <link rel="stylesheet" href="assets/style.css" />
     <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
 
   <body>
@@ -77,20 +78,10 @@
         </div>
         <form id="sendEmail" class="hide">
             <div id="QnA-value" name="message"></div>
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Full Name"
-            required
-          />
-          <br />
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Email"
-            required
-          /><br />
-          <button>Send</button>
+            <input type="text" name="user_name" id="user_name" placeholder="Full Name" required />
+            <br />
+            <input type="email" name="user_email" id="user_email" placeholder="Email" required /><br />
+            <button id="send" type="button">Send</button>
         </form>
         <button type="button" id="email-result">Result on Email!</button>
       </div>

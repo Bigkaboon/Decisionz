@@ -74,6 +74,35 @@ p {
 
 }
 
+/* style for email form */
+#sendEmail {
+    background-color: #1d2d44;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+
+    height: 20vh;
+    border: 3px double #f0ebd8;
+}
+
+#email-result {
+    max-width: 20vw;
+    margin: 1rem auto;
+    background-color: #f0ebd8;
+    border: 2px solid #1d2d44;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+#send {
+    background-color: #f0ebd8;
+    border: 2px solid #1d2d44;
+    font-family: 'Tilt Neon', sans-serif;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    border: 2px solid #0d1321;
+}
+
 #alternative-button {
     width: 20vw;
     margin-left: auto;

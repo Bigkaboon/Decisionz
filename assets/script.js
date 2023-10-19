@@ -209,34 +209,26 @@ document.getElementById('alternative-button').addEventListener('click', function
 
 });
 
+
 document.getElementById("email-result").addEventListener("click", function (event) {
     document.getElementById('sendEmail').classList.remove('hide');
 });
 
-const contact = () => {
 
-    const form = useRef();
-    let qNaValue = document.getElementById("QnA-value");
-    qNaValue = document.getElementById("displayQnA").innerHTML;
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm('service_5zj8vt1', 'template_sc6pd6m', form.current, 'd8LxiloK_bJZiS78E')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-    };
-
-    <form ref={form} onSubmit={sendEmail}>
-        <div name="message" id="QnA-value"></div>
-        <input type="text" name="user_name" />
-
-        <input type="email" name="user_email" />
-
-        <input type="submit" value="Send" />
-    </form>;
+const sendEmail = (userName, userMail) => {
+    emailjs.send('service_5zj8vt1', 'template_sc6pd6m', { name: userName, email: userMail, answers: document.getElementById("QnA-list").innerText }, 'd8LxiloK_bJZiS78E')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
 };
+
+document.getElementById('send').addEventListener('click', (event) => {
+
+    const userName = document.getElementById("user_name").value;
+    const userMail = document.getElementById("user_email").value;
+    sendEmail(userName, userMail);
+    document.getElementById('sendEmail').classList.add('hide');
+});
 

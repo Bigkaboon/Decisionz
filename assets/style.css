@@ -65,6 +65,39 @@ p {
     color: #0d1321;
 }
 
+.hide {
+    display: none !important;
+}
+
+#alternative-inputs {
+    margin-bottom: 1rem;
+
+}
+
+#alternative-button {
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0ebd8;
+    color: #0d1321;
+    height: 5vh;
+    font-family: 'Tilt Neon', sans-serif;
+    border: 2px solid #0d1321
+}
+
+#alternatives-size {
+    background-color: #f0ebd8;
+    width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+    height: 5vh;
+    font-weight: 500;
+    font-family: 'Tilt Neon', sans-serif;
+    margin-top: 1rem;
+    border: 2px solid #0d1321;
+}
+
+
 #submit {
     width: 15vw;
     align-self: center;
@@ -72,6 +105,7 @@ p {
     border: 2px solid #0d1321;
     color: #0d1321;
     margin-top: 1rem;
+    font-family: 'Tilt Neon', sans-serif;
 }
 
 button>p {
@@ -262,7 +296,15 @@ footer {
         width: 50vw;
     }
 
+    #alternatives-size {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20vw;
+    }
 
+    #alternative-button {
+        width: 5vw;
+    }
 
 
     footer {

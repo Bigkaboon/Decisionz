@@ -6,31 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternatives") {
                 let questionType = this.getAttribute("data-type");
                 generateAnswer(questionType);
-                alert(questionType);
-                typeOfQuestion.push(questionType);
-                /* Trying to replace 'null' to the latest questionType 
-
-                if (document.getElementById("data-type") === "null") {
-                    questionType = typeOfQuestion.at(1);
-
-                } */
 
             }
         });
     }
-    let typeOfQuestion = [];
 
 
 
-    document.getElementById("input-area").addEventListener("submit", function () {
+    document.getElementById("input-area").addEventListener("submit", function (event) {
         event.preventDefault();
         handleQuestion();
-        alert(typeOfQuestion);
-        questionType = typeOfQuestion.length[-1];
+
         if (questionType === "alternatives") {
             alternatives();
         }
-        
+
     });
 
 
@@ -50,7 +40,7 @@ function generateAnswer(questionType) {
     }
 }
 
-function handleQuestion(typeOfQuestion) {
+function handleQuestion(questionType) {
 
 
     let userQuestion = document.getElementById("question").value;
@@ -65,10 +55,16 @@ function handleQuestion(typeOfQuestion) {
     displayQnA.appendChild(newQuestion);
 
     document.getElementById("question").value = "";
+
+
 }
 
 
 function yesOrNo(answ1, answ2) {
+    document.getElementById('question').classList.remove('hide');
+    document.getElementById('submit').classList.remove('hide');
+    document.getElementById('alternatives-size').classList.add('hide');
+    document.getElementById('alternative-button').classList.add('hide');
     answ1 = 1;
     answ2 = 2;
     answCheck = Math.floor(Math.random() * 2);
@@ -80,6 +76,10 @@ function yesOrNo(answ1, answ2) {
     }
 }
 function shouldOrShouldNot(answ1, answ2) {
+    document.getElementById('question').classList.remove('hide');
+    document.getElementById('submit').classList.remove('hide');
+    document.getElementById('alternatives-size').classList.add('hide');
+    document.getElementById('alternative-button').classList.add('hide');
     answ1 = 1;
     answ2 = 2;
     answCheck = Math.floor(Math.random() * 2);
@@ -91,15 +91,70 @@ function shouldOrShouldNot(answ1, answ2) {
     }
 }
 
-function alternatives(questionType) {
+function alternatives() {
+    document.getElementById('question').classList.add('hide');
+    document.getElementById('submit').classList.add('hide');
+    document.getElementById('alternatives-size').classList.remove('hide');
+    document.getElementById('alternative-button').classList.remove('hide');
     /* document.getElementById("input-area").addEventListener("submit", function () {
         let altNumber = document.getElementById("question").value;
         console.log(altNumber);
-
+​
     });
  */
+
 }
 function scale() {
 
 }
 
+document.getElementById('alternatives-size').addEventListener('change', function (event) {
+    const size = parseInt(event.target.value);
+    const holder = document.getElementById('alternative-inputs');
+    holder.innerHTML = '';
+    for (let i = 0; i < size; i++) {
+        const text = document.createElement('div');
+        text.innerHTML = "<input type='text' value='' name='items[]' class='alter' style='padding:5px;' placeholder='Enter alternative' />";
+        holder.appendChild(text);
+
+    }
+
+
+});
+
+document.getElementById('alternative-button').addEventListener('click', function (event) {
+
+    const inputValues = document.getElementsByClassName('alter');
+    const alternativesArray = [];
+    for (let inputValue of inputValues) {
+        alternativesArray.push(inputValue.value);
+        console.info(inputValue.value);
+    }
+    var item = alternativesArray[Math.floor(Math.random() * alternativesArray.length)];
+    console.info(item);
+
+    let answer = item;
+
+    let userAlternatives = alternativesArray;
+    if (alternativesArray.length === 2) {
+        userAlternatives = alternativesArray[0] + " and " + alternativesArray[1];
+    } else if (alternativesArray.length === 3) {
+        userAlternatives = alternativesArray[0] + ", " + alternativesArray[1] + "and " + alternativesArray[2];
+    } else if (alternativesArray.length === 4) {
+        userAlternatives = alternativesArray[0] + ", " + alternativesArray[1] + ", " + alternativesArray[2] + " and " + alternativesArray[3];
+    } else if (alternativesArray.length === 5) {
+        userAlternatives = alternativesArray[0] + ", " + alternativesArray[1] + ", " + alternativesArray[2] + ", " + alternativesArray[3] + " and " + alternativesArray[4];
+    }
+
+
+    let newQuestion = document.createElement("li");
+    newQuestion.innerHTML =
+        ` Your alternatives: ${userAlternatives} <br> Answer: ${answer} `;
+
+    let displayQnA = document.getElementById("QnA-list");
+    displayQnA.appendChild(newQuestion);
+
+    const holder = document.getElementById('alternative-inputs');
+    holder.innerHTML = '';
+
+});

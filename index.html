@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/style.css" />
     <title>Document</title>
   </head>
+
   <body>
     <header>
       <h1>Decisionz</h1>
@@ -37,17 +38,28 @@
         </button>
         <button data-type="scale" class="btn">
           <i class="fa-solid fa-scale-unbalanced-flip"></i>
-
+          ​
           <p>Scale</p>
         </button>
       </div>
       <form id="input-area">
         <input type="text" name="question" id="question" />
+        <select id="alternatives-size" class="hide">
+          <option>Select how many alternatives</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <div id="alternative-inputs">​</div>
+        <button id="alternative-button" class="hide" type="button">
+          <p>Choose!</p>
+        </button>
         <button id="submit" type="submit">
           <p>Ask!</p>
         </button>
       </form>
-
+      ​
       <h3>Question's and Answer's</h3>
       <div id="displayQnA">
         <ol id="QnA-list"></ol>

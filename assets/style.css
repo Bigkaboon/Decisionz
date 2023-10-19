@@ -234,6 +234,24 @@ li {
     margin-bottom: 1rem;
 }
 
+#close-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+
+}
+
+.fa-circle-xmark {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+    color: #f0ebd8;
+
+}
 
 footer {
     height: 7vh;

@@ -212,6 +212,7 @@ document.getElementById('alternative-button').addEventListener('click', function
 
 document.getElementById("email-result").addEventListener("click", function (event) {
     document.getElementById('sendEmail').classList.remove('hide');
+
 });
 
 
@@ -223,6 +224,12 @@ const sendEmail = (userName, userMail) => {
             console.log(error.text);
         });
 };
+document.getElementById('close-btn').addEventListener('click', function (event) {
+
+    
+    document.getElementById('sendEmail').classList.add('hide');
+
+});
 
 document.getElementById('send').addEventListener('click', (event) => {
 
@@ -230,5 +237,6 @@ document.getElementById('send').addEventListener('click', (event) => {
     const userMail = document.getElementById("user_email").value;
     sendEmail(userName, userMail);
     document.getElementById('sendEmail').classList.add('hide');
+
 });
 

@@ -6,12 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternatives") {
                 let questionType = this.getAttribute("data-type");
                 generateAnswer(questionType);
-
             }
         });
     }
-
-
 
     document.getElementById("input-area").addEventListener("submit", function (event) {
         event.preventDefault();
@@ -20,10 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (questionType === "alternatives") {
             alternatives();
         }
-
     });
-
-
 });
 
 
@@ -41,10 +35,7 @@ function generateAnswer(questionType) {
 }
 
 function handleQuestion(questionType) {
-
-
     let userQuestion = document.getElementById("question").value;
-
     alert(`Your question is: ` + userQuestion);
 
     let newQuestion = document.createElement("li");
@@ -65,6 +56,10 @@ function yesOrNo(answ1, answ2) {
     document.getElementById('submit').classList.remove('hide');
     document.getElementById('alternatives-size').classList.add('hide');
     document.getElementById('alternative-button').classList.add('hide');
+    document.getElementById('scale-button').classList.add('hide');
+    document.getElementById('scale-input').classList.add('hide');
+    document.getElementById('scale-input').classList.add('hide');
+
     answ1 = 1;
     answ2 = 2;
     answCheck = Math.floor(Math.random() * 2);
@@ -80,6 +75,10 @@ function shouldOrShouldNot(answ1, answ2) {
     document.getElementById('submit').classList.remove('hide');
     document.getElementById('alternatives-size').classList.add('hide');
     document.getElementById('alternative-button').classList.add('hide');
+    document.getElementById('scale-button').classList.add('hide');
+    document.getElementById('scale-input').classList.add('hide');
+    document.getElementById('scale-size').classList.add('hide');
+
     answ1 = 1;
     answ2 = 2;
     answCheck = Math.floor(Math.random() * 2);
@@ -96,17 +95,52 @@ function alternatives() {
     document.getElementById('submit').classList.add('hide');
     document.getElementById('alternatives-size').classList.remove('hide');
     document.getElementById('alternative-button').classList.remove('hide');
-    /* document.getElementById("input-area").addEventListener("submit", function () {
-        let altNumber = document.getElementById("question").value;
-        console.log(altNumber);
-​
-    });
- */
+    document.getElementById('scale-button').classList.add('hide');
+    document.getElementById('scale-input').classList.add('hide');
+    document.getElementById('scale-size').classList.add('hide');
 
 }
 function scale() {
+    document.getElementById('question').classList.add('hide');
+    document.getElementById('submit').classList.add('hide');
+    document.getElementById('alternatives-size').classList.add('hide');
+    document.getElementById('alternative-button').classList.add('hide');
+    document.getElementById('scale-size').classList.remove('hide');
+    document.getElementById('scale-button').classList.remove('hide');
+    document.getElementById('scale-input').classList.remove('hide');
+
 
 }
+/* Event Listener for Scale */
+document.getElementById('scale-size').addEventListener('change', function (event) {
+    scaleSize = parseInt(event.target.value);
+    console.log(scaleSize);
+
+    randomScale = Math.floor(Math.random() * scaleSize);
+    console.log(randomScale);
+
+
+
+});
+
+
+
+
+document.getElementById("scale-button").addEventListener("click", function (event) {
+    let userQuestion = document.getElementById("scale-input").value;
+    console.log(userQuestion);
+
+
+
+    let newQuestion = document.createElement("li");
+    newQuestion.innerHTML =
+        ` Your alternatives: ${userQuestion} <br> Answer: ${randomScale} / ${scaleSize}`;
+
+    let displayQnA = document.getElementById("QnA-list");
+    displayQnA.appendChild(newQuestion);
+});
+
+/* Event Listener's for alternative! */
 
 document.getElementById('alternatives-size').addEventListener('change', function (event) {
     const size = parseInt(event.target.value);
@@ -121,6 +155,8 @@ document.getElementById('alternatives-size').addEventListener('change', function
 
 
 });
+
+
 
 document.getElementById('alternative-button').addEventListener('click', function (event) {
 

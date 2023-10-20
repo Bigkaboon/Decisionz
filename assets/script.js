@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+    "use strict";
     let buttons = document.getElementsByTagName("button");
-
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "yesno", "shouldshouldnt", "scale", "alternatives") {
@@ -10,18 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
     document.getElementById("input-area").addEventListener("submit", function (event) {
         event.preventDefault();
         handleQuestion();
-
-        if (questionType === "alternatives") {
-            alternatives();
-        }
     });
 });
-
-
 
 function generateAnswer(questionType) {
     if (questionType === "yesno") {
@@ -34,21 +26,14 @@ function generateAnswer(questionType) {
         alternatives(questionType);
     }
 }
-
-function handleQuestion(questionType) {
+function handleQuestion() {
     let userQuestion = document.getElementById("question").value;
-    alert(`Your question is: ` + userQuestion);
-
     let newQuestion = document.createElement("li");
     newQuestion.innerHTML =
         ` Question: ${userQuestion} <br> Answer: ${answer} `;
-
     let displayQnA = document.getElementById("QnA-list");
     displayQnA.appendChild(newQuestion);
-
     document.getElementById("question").value = "";
-
-
 }
 
 
@@ -60,9 +45,9 @@ function yesOrNo(answ1, answ2) {
     document.getElementById('scale-button').classList.add('hide');
     document.getElementById('scale-input').classList.add('hide');
     document.getElementById('scale-input').classList.add('hide');
+
     const holder = document.getElementById('alternative-inputs');
     holder.innerHTML = '';
-
 
     answ1 = 1;
     answ2 = 2;
@@ -86,7 +71,6 @@ function shouldOrShouldNot(answ1, answ2) {
     const holder = document.getElementById('alternative-inputs');
     holder.innerHTML = '';
 
-
     answ1 = 1;
     answ2 = 2;
     answCheck = Math.floor(Math.random() * 2);
@@ -106,7 +90,6 @@ function alternatives() {
     document.getElementById('scale-button').classList.add('hide');
     document.getElementById('scale-input').classList.add('hide');
     document.getElementById('scale-size').classList.add('hide');
-
 }
 function scale() {
     document.getElementById('question').classList.add('hide');
@@ -119,30 +102,18 @@ function scale() {
 
     const holder = document.getElementById('alternative-inputs');
     holder.innerHTML = '';
-
-
-
 }
 /* Event Listener for Scale */
 document.getElementById('scale-size').addEventListener('change', function (event) {
     scaleSize = parseInt(event.target.value);
     console.log(scaleSize);
-
     randomScale = Math.floor(Math.random() * scaleSize);
     console.log(randomScale);
-
-
-
 });
-
-
-
 
 document.getElementById("scale-button").addEventListener("click", function (event) {
     let userQuestion = document.getElementById("scale-input").value;
     console.log(userQuestion);
-
-
 
     let newQuestion = document.createElement("li");
     newQuestion.innerHTML =
@@ -159,21 +130,13 @@ document.getElementById('alternatives-size').addEventListener('change', function
     const holder = document.getElementById('alternative-inputs');
     holder.innerHTML = '';
     for (let i = 0; i < size; i++) {
-
         const text = document.createElement('div');
         text.innerHTML = "<input type='text' value='' name='items[]' class='alter' style='padding:5px;' placeholder='Enter alternative' />";
         holder.appendChild(text);
-
     }
-
-
-
 });
 
-
-
 document.getElementById('alternative-button').addEventListener('click', function (event) {
-
     const inputValues = document.getElementsByClassName('alter');
     const alternativesArray = [];
     for (let inputValue of inputValues) {
@@ -195,8 +158,6 @@ document.getElementById('alternative-button').addEventListener('click', function
     } else if (alternativesArray.length === 5) {
         userAlternatives = alternativesArray[0] + ", " + alternativesArray[1] + ", " + alternativesArray[2] + ", " + alternativesArray[3] + " and " + alternativesArray[4];
     }
-
-
     let newQuestion = document.createElement("li");
     newQuestion.innerHTML =
         ` Your alternatives: ${userAlternatives} <br> Answer: ${answer} `;
@@ -212,7 +173,6 @@ document.getElementById('alternative-button').addEventListener('click', function
 
 document.getElementById("email-result").addEventListener("click", function (event) {
     document.getElementById('sendEmail').classList.remove('hide');
-
 });
 
 
@@ -225,14 +185,10 @@ const sendEmail = (userName, userMail) => {
         });
 };
 document.getElementById('close-btn').addEventListener('click', function (event) {
-
-    
     document.getElementById('sendEmail').classList.add('hide');
-
 });
 
 document.getElementById('send').addEventListener('click', (event) => {
-
     const userName = document.getElementById("user_name").value;
     const userMail = document.getElementById("user_email").value;
     sendEmail(userName, userMail);

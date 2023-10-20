@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("input-area").addEventListener("submit", function (event) {
         event.preventDefault();
         handleQuestion();
-        answer = "";
+
     });
 });
 

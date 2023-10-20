@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("input-area").addEventListener("submit", function (event) {
         event.preventDefault();
         handleQuestion();
+        answer = "";
     });
 });
 
@@ -37,29 +38,7 @@ function handleQuestion() {
 }
 
 
-function yesOrNo(answ1, answ2) {
-    document.getElementById('question').classList.remove('hide');
-    document.getElementById('submit').classList.remove('hide');
-    document.getElementById('alternatives-size').classList.add('hide');
-    document.getElementById('alternative-button').classList.add('hide');
-    document.getElementById('scale-button').classList.add('hide');
-    document.getElementById('scale-input').classList.add('hide');
-    document.getElementById('scale-input').classList.add('hide');
-
-    const holder = document.getElementById('alternative-inputs');
-    holder.innerHTML = '';
-
-    answ1 = 1;
-    answ2 = 2;
-    answCheck = Math.floor(Math.random() * 2);
-
-    if (answ1 === answCheck) {
-        answer = "Yes!";
-    } else {
-        answer = "No!";
-    }
-}
-function shouldOrShouldNot(answ1, answ2) {
+function yesOrNo(answ1) {
     document.getElementById('question').classList.remove('hide');
     document.getElementById('submit').classList.remove('hide');
     document.getElementById('alternatives-size').classList.add('hide');
@@ -72,7 +51,28 @@ function shouldOrShouldNot(answ1, answ2) {
     holder.innerHTML = '';
 
     answ1 = 1;
-    answ2 = 2;
+    answCheck = Math.floor(Math.random() * 2);
+
+    if (answ1 === answCheck) {
+        answer = "Yes!";
+    } else {
+        answer = "No!";
+    }
+
+}
+function shouldOrShouldNot(answ1) {
+    document.getElementById('question').classList.remove('hide');
+    document.getElementById('submit').classList.remove('hide');
+    document.getElementById('alternatives-size').classList.add('hide');
+    document.getElementById('alternative-button').classList.add('hide');
+    document.getElementById('scale-button').classList.add('hide');
+    document.getElementById('scale-input').classList.add('hide');
+    document.getElementById('scale-size').classList.add('hide');
+
+    const holder = document.getElementById('alternative-inputs');
+    holder.innerHTML = '';
+
+    answ1 = 1;
     answCheck = Math.floor(Math.random() * 2);
 
     if (answ1 === answCheck) {

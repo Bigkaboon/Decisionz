@@ -15,8 +15,11 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Document</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Decisionz</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
   </head>
 
   <body>
@@ -27,20 +30,19 @@
       <div id="question-area">
         <button data-type="yesno" class="btn 5050">
           <i class="fa-solid fa-dice-d20"></i>
-          <p>Yes/No</p>
+          Yes/No
         </button>
         <button data-type="shouldshouldnt" class="btn 5050">
           <i class="fa-solid fa-dice"></i>
-          <p>Should/Shouldn't</p>
+          Should/Shouldn't
         </button>
         <button data-type="alternatives" class="btn">
           <i class="fa-solid fa-shuffle"></i>
-          <p>Alternatives</p>
+          Alternatives
         </button>
         <button data-type="scale" class="btn">
           <i class="fa-solid fa-scale-unbalanced-flip"></i>
-          ​
-          <p>Scale</p>
+          ​ Scale
         </button>
       </div>
       <form id="input-area">
@@ -54,7 +56,7 @@
         </select>
         <div id="alternative-inputs">​</div>
         <button id="alternative-button" class="hide" type="button">
-          <p>Choose!</p>
+          Choose!
         </button>
         <select id="scale-size" class="hide">
           <option>Select youscale-sizer scale</option>
@@ -64,28 +66,39 @@
         </select>
         <input type="text" id="scale-input" class="hide" />
         <button id="scale-button" class="hide" type="button">
-          <p>Check Odds!</p>
+          Check Odds!
         </button>
-        <button id="submit" type="submit">
-          <p>Ask!</p>
-        </button>
+        <button id="submit" type="submit">Ask!</button>
       </form>
       ​
-      
-        <h3>Question's and Answer's</h3>
-        <div id="displayQnA" name="message">
-            <ol id="QnA-list"></ol>
-        </div>
-        <form id="sendEmail" class="hide">
-            <button id="close-btn" type="button"><i class="fa-regular fa-circle-xmark"></i></button>
-            <div id="QnA-value" name="message"></div>
-            <input type="text" name="user_name" id="user_name" placeholder="Full Name" required />
-            <br />
-            <input type="email" name="user_email" id="user_email" placeholder="Email" required /><br />
-            <button id="send" type="button">Send</button>
-        </form>
-        <button type="button" id="email-result">Result on Email!</button>
+
+      <h3>Question's and Answer's</h3>
+      <div id="displayQnA">
+        <ol id="QnA-list"></ol>
       </div>
+      <form id="sendEmail" class="hide">
+        <button id="close-btn" type="button">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </button>
+
+        <input
+          type="text"
+          name="user_name"
+          id="user_name"
+          placeholder="Full Name"
+          required
+        />
+        <br />
+        <input
+          type="email"
+          name="user_email"
+          id="user_email"
+          placeholder="Email"
+          required
+        /><br />
+        <button id="send" type="button">Send</button>
+      </form>
+      <button type="button" id="email-result">Result on Email!</button>
     </main>
     <footer></footer>
     <script src="assets/script.js"></script>

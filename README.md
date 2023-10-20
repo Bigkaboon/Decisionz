@@ -1,39 +1,59 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Decisionz
 
-Welcome,
+Have you ever had a hard time making an easy decision, maybe what you want to eat for dinner, what you want to do first in your todolist or just wanna have someone else decide if you are going to do that not so necessary thing you thought about doing. Then you should visit [Decisionz](https://bigkaboon.github.io/Decisionz/).
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The application can help you in four different ways, the first two is simular yes or no- and should or shouldn't questions, they are easy to use and the answeres are clear. The other two types is scalee and alternatives. This makes it possible for you to to add in alternatives and get a random one as response, The scale is exactly what it sounds like. It gives you a scale on a question you provide with a scale of your choice.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+![a picture of the main page](assets/readme-images/main-page.png)
 
-## Codeanywhere Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Features
 
-`python3 -m http.server`
+  ---
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+  - **Yes/No** - This feature let the user ask a question in the input field and get one of the answers as response.
+  
+    ![a picture of the yes/no feature](assets/readme-images/yesno.png)
+ 
+  - **Should/Shouldn't** - Very alike the yes/no feature except the answers are different whitch indicates that the user should phrase the question differently
+- 
+    ![a picture of the should/shouldn't feature](assets/readme-images/shouldshouldnt.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+  
+  - **Alternatives** - The alternative feature firstly requier the user to choose how many alternatives they would like, once completed, the user is asked to fill in all the alternatives so that a random alternative can be provided as response.
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+    ![a picture of the alternatives feature](assets/readme-images/alternatives.png)
+  
+  - **Scale** - This feature lets the user pick between three different scales 1-10, 1-100 and 1-1000 and then write the question/statement the user want to see a scale on.
+  
+    ![a picture of the scale feature](assets/readme-images/scale.png)
+  
+  - **Display QnA** - In the white bordered box located just below the "Ask!" button all the questions and answeres gets saved one by one in the order you ask them whitch makes it possible for the user to go back and use the output provided by the application.
+  
+  ![a picture of the display QnA feature](assets/readme-images/qna.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+  - **Email results** - Once you are finished asking your questions and are satisfied of what is displayed in the  QnA-box you can send the content to your email simply by filling in the form whitch appears once "Result on Email" button is clicked.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+  ![a picture of the email results feature](assets/readme-images/email.png)
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
+## Features Left to Implement
 ---
+  - **Response** - With more time I would make the reponse more advanced, an idea to this is answering by using the question. One way to accomplish this would be instead of simply yes or no you could involve the question asked. Let's say the question is "Am I going to sleep good tonight". Then make a function that removes "Am", replace "I" to "you are" (if answer is yes) or "you are not" (if answer is no)  and then answer the question so the output would be "yes you are going to sleep good tonight". This wont probably work for all the questions asked but it would be a cool feature to add.
 
-Happy coding!
+## Validator Testing
+
+## Unfixed bugs
+
+## Deployment
+- I deployed the site to GitHub pages, the process is described by the steps below.
+  * Open the repository and click settings.
+  * Click pages on the side bar to the left.
+  * inside pages select main branch and and root folder.
+  * Once complete press save and deployed version is up and running within a few minuits.
+## Credits
+
+## Media
+

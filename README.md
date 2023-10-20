@@ -54,6 +54,35 @@ The application can help you in four different ways, the first two is simular ye
   * inside pages select main branch and and root folder.
   * Once complete press save and deployed version is up and running within a few minuits.
 ## Credits
+-**Icons** - The icons I used is from google [FontAwesome](https://fontawesome.com/)
 
+- **Love Math** - The planning of the area where you choose what type of question you would like to use is well insperated from the Love Math walk through project, I added the buttons in a div in the same way as in the project but edited code so that the logistics matched the purpuse of my project since they work a bit differently.
+  
+- **Mentor** - I had some issues getting the Email feature to work so I asked my mentor for help to get the functionality behind it to work. I got help with this code provided below. 
+
+```
+const sendEmail = (userName, userMail) => {
+    emailjs.send('service_5zj8vt1', 'template_sc6pd6m', { name: userName, email: userMail, answers: document.getElementById("QnA-list").innerText }, 'd8LxiloK_bJZiS78E')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+};
+document.getElementById('close-btn').addEventListener('click', function (event) {
+    document.getElementById('sendEmail').classList.add('hide');
+});
+
+document.getElementById('send').addEventListener('click', (event) => {
+    const userName = document.getElementById("user_name").value;
+    const userMail = document.getElementById("user_email").value;
+    sendEmail(userName, userMail);
+    document.getElementById('sendEmail').classList.add('hide');
+
+});
+
+```
+
+- **EmailJS** - I used [EmailJS](https://www.emailjs.com/) to send the results via email.
 ## Media
-
+- No media used.
